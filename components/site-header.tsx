@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -29,9 +30,7 @@ export function SiteHeader() {
     >
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-serif font-bold tracking-tight">
-            Nouakchott Taxi & Tourism
-          </span>
+          <Image src="/images/logo.png" alt="Logo" width={60} height={60} />
         </Link>
         
         {/* Desktop Navigation */}

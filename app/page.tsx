@@ -12,7 +12,7 @@ export default function Home() {
       <Services />
       <Destinations />
       <WhyChooseUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTASection />
     </main>
   )

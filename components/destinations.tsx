@@ -5,24 +5,19 @@ import { TourCard } from "@/components/tour-card"
 
 const destinations = [
   {
-    title: "Nouakchott Beach",
-    description: "Relax by the Atlantic Ocean and enjoy fresh seafood at the chaotic but charming Port de Pêche. Watch the colorful fishing boats return at sunset.",
-    image: "https://images.unsplash.com/photo-1544015759-42b78f4b1b86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Nouakchott Beach Experience",
+    description: "Explore the stunning Atlantic coastline with pristine beaches, water activities, and fresh seafood dining.",
+    image: "/images/Nouakchott_Beach.jpg",
   },
   {
-    title: "Chinguetti Ancient City",
-    description: "Explore the ancient library city, a UNESCO World Heritage site, and witness the mesmerizing dunes of the Sahara Desert surrounding this historic oasis.",
-    image: "https://images.unsplash.com/photo-1539650116455-ea782bd6d38b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "Sahara Desert Adventure",
+    description: "Experience the majestic Sahara with dune exploration, camel riding, and traditional Mauritanian tea ceremony.",
+    image: "/images/Sahara_Desert.jpg",
   },
   {
-    title: "Banc d'Arguin National Park",
-    description: "Witness millions of migratory birds in this UNESCO World Heritage coastal park. A paradise for birdwatchers and nature lovers where desert meets ocean.",
-    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Terjit Oasis",
-    description: "Refresh yourself in the cooling springs of Terjit, a stunning oasis nestled in a gorge on the Adrar Plateau. Ideally conducive to relaxation.",
-    image: "https://images.unsplash.com/photo-1512552808759-67d716d95326?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // Placeholder for oasis
+    title: "Cultural City Tour",
+    description: "Discover Nouakchott's vibrant markets, historic landmarks, traditional crafts, and authentic local cuisine.",
+    image: "/images/City_nkc.jpg",
   }
 ]
 
@@ -43,7 +38,7 @@ export function Destinations() {
         </Button>
       </div>
       
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((destination) => (
           <TourCard
             key={destination.title}

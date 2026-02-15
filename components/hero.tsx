@@ -1,15 +1,18 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center text-center text-white overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=2021&q=80"
+        <Image
+          src="/images/hero.jpg"
           alt="Mauritania Desert Landscape"
           className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
       </div>
