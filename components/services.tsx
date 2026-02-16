@@ -1,39 +1,7 @@
-import { Car, Map, Plane, Clock, Shield, Star } from "lucide-react"
+// import { Car, Map, Plane, Clock, Shield, Star } from "lucide-react"
 import { Section } from "@/components/ui/section"
 import { ServiceCard } from "@/components/service-card"
-
-const services = [
-  {
-    title: "Premium Taxi Service",
-    description: "Experience the comfort of our modern fleet. Available 24/7 for city rides and airport transfers.",
-    icon: Car,
-  },
-  {
-    title: "Guided City Tours",
-    description: "Immerse yourself in Nouakchott's culture with our expert local guides.",
-    icon: Map,
-  },
-  {
-    title: "Airport Transfer",
-    description: "Seamless and punctual transfers to and from Nouakchott International Airport (NKC).",
-    icon: Plane,
-  },
-  {
-    title: "All-Day Rental",
-    description: "Rent a car with a driver for a full day of meetings or exploration.",
-    icon: Clock,
-  },
-  {
-    title: "Safe & Secure",
-    description: "Your safety is our priority. Verified drivers and tracked vehicles for peace of mind.",
-    icon: Shield,
-  },
-  {
-    title: "VIP Experience",
-    description: "Luxury vehicle options for special occasions and business travel.",
-    icon: Star,
-  },
-]
+import { allServices } from "@/data/allServices"
 
 export function Services() {
   return (
@@ -47,7 +15,7 @@ export function Services() {
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {services.map((service) => (
+        {allServices.map((service) => (
           <ServiceCard
             key={service.title}
             title={service.title}

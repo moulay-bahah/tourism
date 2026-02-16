@@ -42,16 +42,10 @@ export function SiteHeader() {
             Home
           </Link>
           <Link
-            href="/taxi"
+            href="/Services"
             className="transition-colors hover:text-primary hover:underline underline-offset-4"
           >
-            Taxi Booking
-          </Link>
-          <Link
-            href="/tours"
-            className="transition-colors hover:text-primary hover:underline underline-offset-4"
-          >
-            Tourism
+            Services
           </Link>
           <Link
             href="/contact"
@@ -61,25 +55,25 @@ export function SiteHeader() {
           </Link>
         </nav>
 
-        <div className="hidden md:flex items-center space-x-4">
+        {/* <div className="hidden md:flex items-center space-x-4">
           <Button variant={isScrolled ? "default" : "secondary"} size="sm">
             Book Now
           </Button>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden p-2"
+          className={`md:hidden p-2 z-50 ${isScrolled ? "bg-background/95 backdrop-blur shadow-sm border-b supports-[backdrop-filter]:bg-background/60" : "bg-transparent text-white"}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-6 w-6 text-black" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-background border-b shadow-lg md:hidden flex flex-col p-4 space-y-4 animate-in slide-in-from-top-5">
+        <div className="absolute top-0 left-0 w-full bg-background border-b shadow-lg md:hidden flex flex-col p-4 space-y-4 animate-in slide-in-from-top-5">
           <nav className="flex flex-col space-y-4">
             <Link
               href="/"
@@ -89,18 +83,11 @@ export function SiteHeader() {
               Home
             </Link>
             <Link
-              href="/taxi"
+              href="/Services"
               className="text-foreground hover:text-primary font-medium"
               onClick={() => setIsOpen(false)}
             >
-              Taxi Booking
-            </Link>
-            <Link
-              href="/tours"
-              className="text-foreground hover:text-primary font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Tourism
+              Services
             </Link>
             <Link
               href="/contact"
@@ -110,9 +97,9 @@ export function SiteHeader() {
               Contact
             </Link>
           </nav>
-          <div className="pt-4 border-t">
+          {/* <div className="pt-4 border-t">
              <Button className="w-full">Book Now</Button>
-          </div>
+          </div> */}
         </div>
       )}
     </header>

@@ -17,7 +17,7 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Nouakchott Taxi & Tourism",
-  description: "Experience the beauty of Mauritania with reliable taxi services and curated tours.",
+  description: "Experience the beauty of Mauritania with reliable curated tours.",
 };
 
 export default function RootLayout({
