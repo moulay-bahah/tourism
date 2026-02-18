@@ -17,8 +17,12 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Nouakchott Taxi & Tourism",
+  title: "Nouakchott Tourism",
   description: "Experience the beauty of Mauritania with reliable curated tours.",
+    icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
 };
 
 export default function RootLayout({
@@ -28,15 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* Google tag (gtag.js)
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCK4FDRE1K"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-NCK4FDRE1K');
-      </script> */}
       <body
         className={`${playfair.variable} ${lato.variable} antialiased`}
       >
