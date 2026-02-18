@@ -3,6 +3,7 @@ import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -45,6 +46,7 @@ export default function RootLayout({
           <SiteFooter />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-NCK4FDRE1K" />
     </html>
   );
 }
