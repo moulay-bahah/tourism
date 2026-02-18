@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react"
+import Image from "next/image"
 
 export function  SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function  SiteFooter() {
         <div className="grid gap-12 md:grid-cols-4">
           
           <div className="space-y-4">
-            <h3 className="text-xl font-serif font-bold text-secondary">Nouakchott Taxi & Tourism</h3>
+            <h3 className="text-xl font-serif font-bold text-secondary"><Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-20 h-20 mx-auto" /></h3>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Experience the warmth of Mauritania. From reliable city transfers to breathtaking desert expeditions, we are your trusted local guide.
             </p>
@@ -60,7 +61,7 @@ export function  SiteFooter() {
           
         </div>
         <div className="mt-12 border-t border-primary-foreground/10 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Nouakchott Taxi & Tourism. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nouakchott tours. All rights reserved.</p>
         </div>
       </div>
     </footer>

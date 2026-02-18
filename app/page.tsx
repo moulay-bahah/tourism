@@ -16,7 +16,7 @@ export default function Home() {
       <Destinations />
       <WhyChooseUs />
       {/* <Testimonials /> */}
-      <CTASection />
+      {/* <CTASection /> */}
     </main>
   )
 }

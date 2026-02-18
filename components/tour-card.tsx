@@ -12,8 +12,7 @@ interface TourCardProps {
 
 export function TourCard({ title, description, image, href = "/tours", className }: TourCardProps) {
   return (
-    <Link 
-      href={href} 
+    <span
       className={cn(
         "group flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-border/50", 
         className
@@ -36,6 +35,6 @@ export function TourCard({ title, description, image, href = "/tours", className
           {description}
         </p>
       </div>
-    </Link>
+    </span>
   )
 }

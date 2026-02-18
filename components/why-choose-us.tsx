@@ -40,7 +40,7 @@ export function WhyChooseUs() {
           Experience the Difference
         </p>
         <p className="mt-6 text-lg leading-8 text-primary-foreground/80">
-          We don't just offer transportation; we offer peace of mind and authentic experiences in Mauritania.
+          We don't just offer tours; we offer peace of mind and authentic experiences in Mauritania.
         </p>
       </div>
       <div className="relative z-10 mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

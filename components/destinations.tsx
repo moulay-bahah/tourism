@@ -33,9 +33,9 @@ export function Destinations() {
             Explore the hidden gems of Mauritania. From the Atlantic coast to the deep Sahara, adventure awaits.
           </p>
         </div>
-        <Button asChild variant="outline" className="hidden md:inline-flex">
+        {/* <Button asChild variant="outline" className="hidden md:inline-flex">
            <Link href="/tours">View All Tours</Link>
-        </Button>
+        </Button> */}
       </div>
       
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -49,11 +49,11 @@ export function Destinations() {
         ))}
       </div>
       
-      <div className="mt-8 text-center md:hidden">
+      {/* <div className="mt-8 text-center md:hidden">
         <Button asChild variant="outline" size="lg">
            <Link href="/tours">View All Tours</Link>
         </Button>
-      </div>
+      </div> */}
     </Section>
   )
 }
