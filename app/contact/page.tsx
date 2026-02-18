@@ -25,7 +25,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
@@ -48,8 +48,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Phone Number</h3>
                   <p className="text-muted-foreground">
-                    +222 45 67 89 00 <br />
-                    +222 36 12 34 56 (WhatsApp)
+                    +222 37 11 11 07 (WhatsApp)
                   </p>
                 </div>
               </div>
@@ -61,8 +60,8 @@ export default function ContactPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Email Address</h3>
                   <p className="text-muted-foreground">
-                    info@nouakchotttourism.com<br />
-                    bookings@nouakchotttourism.com
+                    afroservices9@gmail.com<br />
+                    yeslemsouvi@gmail.com
                   </p>
                 </div>
               </div>
@@ -70,7 +69,7 @@ export default function ContactPage() {
                  {/* Map Placeholder */}
                  <div className="w-full h-64 bg-slate-200 rounded-lg overflow-hidden relative">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120970.66981759667!2d-16.035767986161967!3d18.09344400262143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA1JzM2LjQiTiAxNsKwMDInMDguOCJX!5e0!3m2!1sen!2smr!4v1635783456789!5m2!1sen!2smr" 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15070.58975996462!2d-15.955937352499996!3d18.118030857030522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2s!4v1771426949140!5m2!1sar!2s" 
                         width="100%" 
                         height="100%" 
                         style={{ border: 0 }} 
@@ -82,7 +81,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm border">
+            {/* <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm border">
               <form className="space-y-6">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
@@ -143,7 +142,7 @@ export default function ContactPage() {
                   <Send className="mr-2 h-4 w-4" /> Send Message
                 </Button>
               </form>
-            </div>
+            </div> */}
           </div>
       </Section>
     </div>

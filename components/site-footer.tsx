@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react"
 
-export function SiteFooter() {
+export function  SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary/20">
       <div className="container py-12 md:py-16">
@@ -17,10 +17,8 @@ export function SiteFooter() {
           <div>
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Services</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li><Link href="/taxi" className="hover:text-white transition-colors">Taxi Booking</Link></li>
-              <li><Link href="/tours" className="hover:text-white transition-colors">Desert Tours</Link></li>
-              <li><Link href="/airport" className="hover:text-white transition-colors">Airport Transfer</Link></li>
-              <li><Link href="/car-rental" className="hover:text-white transition-colors">Car Rental</Link></li>
+              <li><Link href="/Services" className="hover:text-white transition-colors">Our Services</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -33,11 +31,11 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-secondary shrink-0" />
-                <span>+222 40 00 00 00</span>
+                <span>+222 37 11 11 07</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-secondary shrink-0" />
-                <span>info@rim-tourism.com</span>
+                <span>afroservices9@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -45,15 +43,15 @@ export function SiteFooter() {
           <div>
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
+              {/* <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
+              </Link> */}
+              <Link href="https://www.instagram.com/afro_service_tourism?igsh=MWlkMTl0MDdvenFpNg%3D%3D&utm_source=qr" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
