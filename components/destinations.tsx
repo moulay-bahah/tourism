@@ -17,7 +17,7 @@ const destinations = [
   {
     title: "Cultural City Tour",
     description: "Discover Nouakchott's vibrant markets, historic landmarks, traditional crafts, and authentic local cuisine.",
-    image: "/images/City_nkc.jpg",
+    image: "/images/city_nkc.jpg",
   }
 ]
 
