@@ -11,7 +11,7 @@ export function Services() {
           Our Services
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          We provide top-notch transportation and tourism services tailored to your needs in Mauritania.
+          We provide top-notch tourism services tailored to your needs in Mauritania.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

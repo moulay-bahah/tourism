@@ -15,7 +15,7 @@ export function Hero({title, description}: {title: string | JSX.Element, descrip
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" /> */}
       </div>
       <div className="container relative z-10 flex flex-col items-center gap-8 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-5">
         <div className="space-y-4 max-w-4xl">

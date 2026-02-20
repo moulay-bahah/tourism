@@ -7,17 +7,17 @@ const destinations = [
   {
     title: "Nouakchott Beach Experience",
     description: "Explore the stunning Atlantic coastline with pristine beaches, water activities, and fresh seafood dining.",
-    image: "/images/Nouakchott_Beach.jpg",
+    image: "/tourism/beach4.jpeg",
   },
   {
     title: "Sahara Desert Adventure",
     description: "Experience the majestic Sahara with dune exploration, camel riding, and traditional Mauritanian tea ceremony.",
-    image: "/images/Sahara_Desert.jpg",
+    image: "/tourism/desert4.jpeg",
   },
   {
     title: "Cultural City Tour",
     description: "Discover Nouakchott's vibrant markets, historic landmarks, traditional crafts, and authentic local cuisine.",
-    image: "/images/city_nkc.jpg",
+    image: "/tourism/nkc2.jpeg",
   }
 ]
 
