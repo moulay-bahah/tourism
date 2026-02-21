@@ -7,17 +7,17 @@ const destinations = [
   {
     title: "Nouakchott Beach Experience",
     description: "Explore the stunning Atlantic coastline with pristine beaches, water activities, and fresh seafood dining.",
-    image: "/tourism/beach4.jpeg",
+    images: ["/tourism/beach4.jpeg", "/tourism/beach1.jpeg", "/tourism/beach2.jpeg", "/tourism/beach3.jpeg"],
   },
   {
     title: "Sahara Desert Adventure",
     description: "Experience the majestic Sahara with dune exploration, camel riding, and traditional Mauritanian tea ceremony.",
-    image: "/tourism/desert4.jpeg",
+    images: ["/tourism/desert4.jpeg", "/tourism/desert1.jpeg", "/tourism/desert2.jpeg", "/tourism/desert3.jpeg", "/tourism/desert5.jpeg", "/tourism/desert6.jpeg"],
   },
   {
     title: "Cultural City Tour",
     description: "Discover Nouakchott's vibrant markets, historic landmarks, traditional crafts, and authentic local cuisine.",
-    image: "/tourism/nkc2.jpeg",
+    images: ["/tourism/nkc2.jpeg", "/tourism/nkc.jpeg", "/tourism/nkc3.jpeg", "/tourism/nkc4.jpeg"],
   }
 ]
 
@@ -44,7 +44,7 @@ export function Destinations() {
             key={destination.title}
             title={destination.title}
             description={destination.description}
-            image={destination.image}
+            images={destination.images}
           />
         ))}
       </div>
