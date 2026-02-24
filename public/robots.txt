@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mauritania-tour.com
+
+# Sitemaps
+Sitemap: https://mauritania-tour.com/sitemap.xml
