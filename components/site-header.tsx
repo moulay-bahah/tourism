@@ -42,7 +42,7 @@ export function SiteHeader() {
             Home
           </Link>
           <Link
-            href="/Services"
+            href="/services"
             className="transition-colors hover:text-primary hover:underline underline-offset-4"
           >
             Services

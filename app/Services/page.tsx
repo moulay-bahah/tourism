@@ -6,8 +6,8 @@ import { allServices } from "@/data/allServices"
 import { Hero } from "@/components/hero"
 
 export const metadata: Metadata = {
-  title: "Our Services | Nouakchott Tourism & Tours",
-  description: "Explore our comprehensive range of transportation and tourism services in Mauritania.",
+  title: "Mauritania Travel Services, Tours & Nouakchott Taxi",
+  description: "Explore our premium Mauritania travel services, including Sahara desert tours, Nouakchott taxi bookings, and professional local tourism guides.",
 }
 
       // <section className="relative bg-slate-900 text-white py-20 text-center">
@@ -23,15 +23,36 @@ export const metadata: Metadata = {
       // </section>
 
 export default function ServicesPage() {
-  const title = `Our Services`
-  const description = `Professional transportation and tourism solutions tailored to make your stay in Mauritania unforgettable.`
+  const title = `Comprehensive Mauritania Tourism & Travel Services`
+  const description = `Professional transportation and tourism solutions tailored to make your stay in Mauritania unforgettable. From Sahara desert tours to reliable Nouakchott taxi & airport transfers.`
   return (
     <div className="flex flex-col min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": allServices.map((service, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "name": service.title,
+              "description": service.description
+            }))
+          })
+        }}
+      />
       {/* Hero Section for Services */}
       <Hero title={title} description={description} />
 
       {/* Services Grid */}
       <Section className="bg-slate-50 dark:bg-slate-900/50 flex-grow">
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
+            <h2 className="text-3xl font-serif font-bold text-primary">Our Travel & Transportation Solutions</h2>
+            <p className="text-lg text-muted-foreground">
+              Whether you need reliable Nouakchott taxi services for your business trip or you're planning a multi-day Sahara desert tour in Mauritania, we offer complete travel logistics. Each of our services is designed with safety, comfort, and authenticity in mind.
+            </p>
+          </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {allServices.map((service) => (
               <ServiceCard
@@ -42,6 +63,14 @@ export default function ServicesPage() {
                 className="bg-white dark:bg-slate-800"
               />
             ))}
+          </div>
+          <div className="mt-16 text-center border-t pt-8">
+            <p className="text-lg text-muted-foreground mb-4">
+              Ready to plan your trip? 
+            </p>
+            <a href="/contact" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
+              Contact us for a custom itinerary
+            </a>
           </div>
       </Section>
     </div>

@@ -18,7 +18,7 @@ export function  SiteFooter() {
           <div>
             <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Services</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li><Link href="/Services" className="hover:text-white transition-colors">Our Services</Link></li>
+              <li><Link href="/services" className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>

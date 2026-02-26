@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
 import { Metadata } from "next"
 import { Hero } from "@/components/hero"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Contact Us | Nouakchott Taxi & Tourism",
-  description: "Get in touch with us for taxi bookings, tour inquiries, or any questions about traveling in Mauritania.",
+  title: "Contact Us | Book Your Mauritania Tour & Taxi Today",
+  description: "Contact our local Mauritania tourism experts for tour inquiries, custom itineraries, and reliable Nouakchott taxi bookings. Get in touch today!",
 }
 
 export default function ContactPage() {
@@ -14,6 +15,25 @@ export default function ContactPage() {
   const description = `We'd love to hear from you. Whether you have a question about our services, pricing, or need to book a ride, our team is ready to answer all your questions.`
   return (
     <div className="flex flex-col min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Nouakchott Taxi & Tourism",
+            "description": "Contact our local Mauritania tourism experts for tour inquiries, custom itineraries, and reliable Nouakchott taxi bookings.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "123 Avenue Gamal Abdel Nasser",
+              "addressLocality": "Nouakchott",
+              "addressCountry": "MR"
+            },
+            "telephone": "+222 37 11 11 07",
+            "email": "afroservices9@gmail.com"
+          })
+        }}
+      />
       <Hero title={title} description={description} />
       <Section className="bg-slate-50 dark:bg-slate-900/50 flex-grow">
           <div className="text-center space-y-4 mb-12">
@@ -63,6 +83,7 @@ export default function ContactPage() {
                     afroservices9@gmail.com<br />
                     yeslemsouvi@gmail.com
                   </p>
+                  <p className="text-sm text-green-600 dark:text-green-400 font-medium mt-1">Average response time: Within 24 hours</p>
                 </div>
               </div>
 
@@ -82,45 +103,27 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             {/* <div className="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-sm border">
+              <h2 className="text-2xl font-semibold mb-6">Get in Touch for Tour & Taxi Bookings</h2>
               <form className="space-y-6">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div className="space-y-2">
-                    <label htmlFor="first-name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">First name</label>
-                    <input
-                      id="first-name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="John"
-                      required
-                    />
+                    <label htmlFor="first-name" className="text-sm font-medium leading-none">First name</label>
+                    <input id="first-name" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground" placeholder="John" required />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="last-name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Last name</label>
-                    <input
-                      id="last-name"
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                      placeholder="Doe"
-                      required
-                    />
+                    <label htmlFor="last-name" className="text-sm font-medium leading-none">Last name</label>
+                    <input id="last-name" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground" placeholder="Doe" required />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="john.doe@example.com"
-                    required
-                  />
+                  <label htmlFor="email" className="text-sm font-medium leading-none">Email</label>
+                  <input id="email" type="email" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground" placeholder="john.doe@example.com" required />
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Subject</label>
-                   <select
-                        id="subject"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    >
+                  <label htmlFor="subject" className="text-sm font-medium leading-none">Subject</label>
+                   <select id="subject" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground">
                         <option value="general">General Inquiry</option>
                         <option value="taxi">Taxi Booking</option>
                         <option value="tour">Tour Reservation</option>
@@ -129,13 +132,8 @@ export default function ContactPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Message</label>
-                  <textarea
-                    id="message"
-                    className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                    placeholder="How can we help you?"
-                    required
-                  />
+                  <label htmlFor="message" className="text-sm font-medium leading-none">Message</label>
+                  <textarea id="message" className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground" placeholder="How can we help you?" required />
                 </div>
 
                 <Button type="submit" className="w-full">
@@ -144,6 +142,32 @@ export default function ContactPage() {
               </form>
             </div> */}
           </div>
+      </Section>
+
+      {/* FAQ Section */}
+      <Section className="bg-white dark:bg-slate-900 border-t">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="text-3xl font-serif font-bold tracking-tight text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-primary">Do you help with Mauritania visas?</h3>
+              <p className="text-muted-foreground mt-1">Yes, we can provide letters of invitation for our booked tour guests and assist with the visa-on-arrival process at Nouakchott airport.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-primary">Do you offer airport pickups?</h3>
+              <p className="text-muted-foreground mt-1">Absolutely! We provide 24/7 reliable taxi and airport transfer services directly from Nouakchott Oumtounsy International Airport to your hotel.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-primary">Are your Sahara desert tours safe?</h3>
+              <p className="text-muted-foreground mt-1">Your safety is our priority. Mauritania is known for its hospitality, and our expert local guides ensure all our Sahara and city tours follow secure routes.</p>
+            </div>
+          </div>
+          <div className="text-center pt-8 mt-8 border-t">
+            <p className="text-lg text-muted-foreground">
+              Still browsing? View all our <Link href="/services" className="text-primary font-medium hover:underline">Mauritania Travel Services</Link>.
+            </p>
+          </div>
+        </div>
       </Section>
     </div>
   )
