@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const title = <>Discover the Heart of <br /> <span className="text-secondary">Mauritania</span>: <span className="text-3xl md:text-5xl block mt-4">Expert Guided Tours</span></>
+  // Discover the Heart of <br /> <span className="text-secondary">Mauritania</span>:
+  const title = <><span className="text-3xl md:text-5xl block mt-4">Expert Guided Tours</span></>
   const description = `Your gateway to unforgettable guided tours in Nouakchott and beyond.`
 
   return (
