@@ -6,8 +6,8 @@ import { allServices } from "@/data/allServices"
 import { Hero } from "@/components/hero"
 
 export const metadata: Metadata = {
-  title: "Mauritania Travel Services, Tours & Nouakchott Taxi",
-  description: "Explore our premium Mauritania travel services, including Sahara desert tours, Nouakchott taxi bookings, and professional local tourism guides.",
+  title: "Mauritania Travel Services & Tours",
+  description: "Explore our premium Mauritania travel services, including Sahara desert tours, and professional local tourism guides.",
 }
 
       // <section className="relative bg-slate-900 text-white py-20 text-center">
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
       // </section>
 
 export default function ServicesPage() {
-  const title = `Comprehensive Mauritania Tourism & Travel Services`
-  const description = `Professional transportation and tourism solutions tailored to make your stay in Mauritania unforgettable. From Sahara desert tours to reliable Nouakchott taxi & airport transfers.`
+  const title = `Our Services`
+  const description = `Professional tourism solutions tailored to make your stay in Mauritania unforgettable.`
   return (
     <div className="flex flex-col min-h-screen">
       <script

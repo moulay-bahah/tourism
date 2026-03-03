@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const title = `Get in Touch`
-  const description = `We'd love to hear from you. Whether you have a question about our services, pricing, or need to book a ride, our team is ready to answer all your questions.`
+  const description = `We'd love to hear from you.`
   return (
     <div className="flex flex-col min-h-screen">
       <script
