@@ -7,23 +7,17 @@ interface SectionProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const Section = React.forwardRef<HTMLElement, SectionProps>(
-  ({ className, container = true, containerClassName, children, ...props }, ref) => {
-    return (
-      <section
-        ref={ref}
-        className={cn("py-16 md:py-24 overflow-hidden", className)}
-        {...props}
-      >
-        {container ? (
-          <div className={cn("container mx-auto px-4 sm:px-6 lg:px-8", containerClassName)}>
-            {children}
-          </div>
-        ) : (
-          children
-        )}
-      </section>
-    )
-  }
+  ({ className, container = true, containerClassName, children, ...props }, ref) => (
+    <section ref={ref} className={cn("overflow-hidden py-16 md:py-24", className)} {...props}>
+      {container ? (
+        <div className={cn("mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8", containerClassName)}>
+          {children}
+        </div>
+      ) : (
+        children
+      )}
+    </section>
+  ),
 )
 Section.displayName = "Section"
 

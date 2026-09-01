@@ -1,67 +1,72 @@
-import Link from "next/link"
-import { Facebook, Instagram, Twitter, MapPin, Mail, Phone } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
+import { Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 
-export function  SiteFooter() {
+const whatsappUrl = "https://wa.me/22237111107"
+
+export function SiteFooter() {
   return (
-    <footer className="bg-primary text-primary-foreground border-t border-primary/20">
-      <div className="container py-12 md:py-16">
-        <div className="grid gap-12 md:grid-cols-4">
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-serif font-bold text-secondary"><Image src="/images/logo.png" alt="Logo" width={100} height={100} className="w-20 h-20 mx-auto" /></h3>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
-              Experience the warmth of Mauritania. From reliable city transfers to breathtaking desert expeditions, we are your trusted local guide.
+    <footer className="bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
+        <div className="grid gap-10 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-[1.4fr_0.7fr_1fr]">
+          <div className="max-w-md">
+            <Link href="/" className="inline-flex items-center gap-3 rounded-md" aria-label="Afro Service Tourism home">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white p-2">
+                <Image src="/images/logo.png" alt="" width={50} height={45} />
+              </span>
+              <span>
+                <span className="block font-serif text-xl font-bold text-white">Afro Service Tourism</span>
+                <span className="block text-xs font-bold uppercase tracking-[0.2em] text-secondary">Mauritania</span>
+              </span>
+            </Link>
+            <p className="mt-5 text-sm leading-7 text-white/70">
+              Private tours, airport transfers, and practical local support for travelers exploring Nouakchott and the Mauritanian Sahara.
             </p>
           </div>
 
           <div>
-            <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Services</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li><Link href="/services" className="hover:text-white transition-colors">Our Services</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-secondary">Explore</h2>
+            <ul className="mt-5 space-y-3 text-sm text-white/75">
+              <li><Link href="/" className="transition-colors hover:text-white">Home</Link></li>
+              <li><Link href="/services" className="transition-colors hover:text-white">Services</Link></li>
+              <li><Link href="/contact" className="transition-colors hover:text-white">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Contact Us</h4>
-            <ul className="space-y-4 text-sm text-primary-foreground/70">
-              <li className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-secondary shrink-0" />
-                <span>123 Avenue de l'Ambassade, Nouakchott, Mauritania</span>
+            <h2 className="text-sm font-bold uppercase tracking-[0.18em] text-secondary">Contact</h2>
+            <ul className="mt-5 space-y-4 text-sm text-white/75">
+              <li className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                <span>Nouakchott, Mauritania</span>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-secondary shrink-0" />
-                <span>+222 37 11 11 07</span>
+              <li>
+                <a href="tel:+22237111107" className="flex items-center gap-3 transition-colors hover:text-white">
+                  <Phone className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                  +222 37 11 11 07
+                </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-secondary shrink-0" />
-                <span>afroservices9@gmail.com</span>
+              <li>
+                <a href="mailto:afroservices9@gmail.com" className="flex items-center gap-3 break-all transition-colors hover:text-white">
+                  <Mail className="h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                  afroservices9@gmail.com
+                </a>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-6 text-sm font-bold uppercase tracking-wider text-secondary">Follow Us</h4>
-            <div className="flex space-x-4">
-              {/* <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link> */}
-              <Link href="https://www.instagram.com/afro_service_tourism?igsh=MWlkMTl0MDdvenFpNg%3D%3D&utm_source=qr" className="p-2 bg-primary-foreground/10 rounded-full hover:bg-secondary hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
+            <div className="mt-6 flex gap-3">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-accent-foreground" aria-label="Chat on WhatsApp">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <a href="https://www.instagram.com/afro_service_tourism" target="_blank" rel="noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-accent hover:text-accent-foreground" aria-label="Visit Afro Service Tourism on Instagram">
+                <Instagram className="h-5 w-5" aria-hidden="true" />
+              </a>
             </div>
           </div>
-          
         </div>
-        <div className="mt-12 border-t border-primary-foreground/10 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Nouakchott tours. All rights reserved.</p>
+
+        <div className="flex flex-col gap-3 pt-7 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Afro Service Tourism. All rights reserved.</p>
+          <p>Local knowledge. Thoughtful journeys.</p>
         </div>
       </div>
     </footer>

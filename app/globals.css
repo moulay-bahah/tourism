@@ -3,133 +3,108 @@
 @theme {
   --font-sans: var(--font-lato);
   --font-serif: var(--font-playfair);
-
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
-
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 }
 
 :root {
-  /* Warm Off-White Background */
-  --background: 40 20% 98%;
-  /* Dark Brown-Gray Text */
-  --foreground: 25 10% 20%;
-
-  /* White Cards */
+  --background: 42 36% 97%;
+  --foreground: 207 30% 14%;
   --card: 0 0% 100%;
-  --card-foreground: 25 10% 20%;
-
+  --card-foreground: 207 30% 14%;
   --popover: 0 0% 100%;
-  --popover-foreground: 25 10% 20%;
-
-  /* Deep Ocean Blue */
-  --primary: 210 50% 30%;
-  --primary-foreground: 40 20% 98%;
-
-  /* Desert Sand */
-  --secondary: 35 60% 88%;
-  --secondary-foreground: 210 50% 30%;
-
-  /* Soft Sand/Beige for Muted elements */
-  --muted: 35 20% 94%;
-  --muted-foreground: 25 5% 45%;
-
-  /* Sunset Orange */
-  --accent: 25 85% 55%;
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-
-  --border: 35 15% 85%;
-  --input: 35 15% 85%;
-  --ring: 210 50% 30%;
-  --radius: 0.75rem;
-}
-
-.dark {
-  /* Deep Night Blue Background */
-  --background: 215 30% 12%;
-  --foreground: 40 20% 98%;
-
-  --card: 215 25% 15%;
-  --card-foreground: 40 20% 98%;
-
-  --popover: 215 25% 15%;
-  --popover-foreground: 40 20% 98%;
-
-  /* Lighter Ocean Blue for Dark Mode */
-  --primary: 210 60% 60%;
-  --primary-foreground: 215 30% 12%;
-
-  /* Muted Gold */
-  --secondary: 35 40% 30%;
-  --secondary-foreground: 40 20% 98%;
-
-  --muted: 215 20% 20%;
-  --muted-foreground: 215 15% 70%;
-
-  /* Burnt Orange */
-  --accent: 25 70% 50%;
-  --accent-foreground: 0 0% 100%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 0 0% 98%;
-
-  --border: 215 20% 20%;
-  --input: 215 20% 20%;
-  --ring: 210 60% 60%;
+  --popover-foreground: 207 30% 14%;
+  --primary: 205 58% 20%;
+  --primary-foreground: 40 33% 98%;
+  --secondary: 39 60% 88%;
+  --secondary-foreground: 205 58% 20%;
+  --muted: 39 24% 92%;
+  --muted-foreground: 207 12% 40%;
+  --accent: 28 85% 54%;
+  --accent-foreground: 207 30% 12%;
+  --destructive: 0 72% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 38 20% 83%;
+  --input: 38 20% 83%;
+  --ring: 28 85% 54%;
+  --radius: 0.875rem;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    min-width: 320px;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-primary;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgb(232 145 47 / 18%);
+  }
+
+  :focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: hsl(var(--accent) / 0.28);
   }
 }
 
-/* Embla Carousel Styles */
-.embla {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-  touch-action: pan-y pinch-zoom;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

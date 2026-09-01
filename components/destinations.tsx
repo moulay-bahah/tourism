@@ -1,59 +1,48 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Section } from "@/components/ui/section"
 import { TourCard } from "@/components/tour-card"
 
 const destinations = [
   {
-    title: "Nouakchott Beach Experience",
-    description: "Explore the stunning Atlantic coastline with pristine beaches, water activities, and fresh seafood dining.",
-    images: ["/tourism/beach4.jpeg", "/tourism/beach1.jpeg", "/tourism/beach2.jpeg", "/tourism/beach3.jpeg"],
+    eyebrow: "Atlantic Coast",
+    title: "Nouakchott by the Sea",
+    description:
+      "Visit the lively fish market, take in the open coastline, and experience the capital through local food and daily life.",
+    image: "/tourism/beach4.jpeg",
   },
   {
-    title: "Sahara Desert Adventure",
-    description: "Experience the majestic Sahara with dune exploration, camel riding, and traditional Mauritanian tea ceremony.",
-    images: ["/tourism/desert4.jpeg", "/tourism/desert1.jpeg", "/tourism/desert2.jpeg", "/tourism/desert3.jpeg", "/tourism/desert5.jpeg", "/tourism/desert6.jpeg"],
+    eyebrow: "Sahara",
+    title: "Desert & Oasis Journeys",
+    description:
+      "Travel by 4×4 through changing desert landscapes, pause for Mauritanian tea, and shape a route around the places that interest you most.",
+    image: "/tourism/desert3.jpeg",
   },
   {
-    title: "Cultural City Tour",
-    description: "Discover Nouakchott's vibrant markets, historic landmarks, traditional crafts, and authentic local cuisine.",
-    images: ["/tourism/nkc2.jpeg", "/tourism/nkc.jpeg", "/tourism/nkc3.jpeg", "/tourism/nkc4.jpeg"],
-  }
+    eyebrow: "Culture",
+    title: "Nouakchott City Life",
+    description:
+      "Explore markets, museums, artisan workshops, and neighborhood stories with a guide who brings the city into focus.",
+    image: "/tourism/nkc2.jpeg",
+  },
 ]
 
 export function Destinations() {
   return (
     <Section>
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-        <div className="space-y-4 max-w-2xl">
-          <h2 className="text-3xl font-serif font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
-            Featured Destinations
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Explore the hidden gems of Mauritania. From the Atlantic coast to the deep Sahara, adventure awaits.
-          </p>
-        </div>
-        {/* <Button asChild variant="outline" className="hidden md:inline-flex">
-           <Link href="/tours">View All Tours</Link>
-        </Button> */}
+      <div className="max-w-2xl">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-accent">Signature Experiences</p>
+        <h2 className="mt-3 text-3xl font-bold text-primary sm:text-4xl md:text-5xl">
+          Three sides of Mauritania.
+        </h2>
+        <p className="mt-4 text-lg leading-8 text-muted-foreground">
+          Start with an idea. We will help turn it into a route that fits your time and travel style.
+        </p>
       </div>
-      
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {destinations.map((destination) => (
-          <TourCard
-            key={destination.title}
-            title={destination.title}
-            description={destination.description}
-            images={destination.images}
-          />
+
+      <div className="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+        {destinations.map((destination, index) => (
+          <TourCard key={destination.title} {...destination} priority={index === 0} />
         ))}
       </div>
-      
-      {/* <div className="mt-8 text-center md:hidden">
-        <Button asChild variant="outline" size="lg">
-           <Link href="/tours">View All Tours</Link>
-        </Button>
-      </div> */}
     </Section>
   )
 }
